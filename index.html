@@ -5,39 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon | Tiffin Bay Montessori School</title>
   <meta name="description" content="Coming soon to Midland: Tiffin Bay Montessori School. CWELCC enrolled with $22/day spaces." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    .coming-soon {max-width: 860px; margin: 3rem auto; background:#fff; border:1px solid #e5e7eb; border-radius: 14px; padding: 2rem;}
-    .eyebrow {font-size:.85rem; letter-spacing:.08em; font-weight:700; color:#2f855a; text-transform:uppercase; margin-bottom:.5rem}
-    .lead {font-size:1.1rem; color:#374151}
-    .pill {display:inline-block; margin:.75rem 0 1rem; padding:.45rem .7rem; border-radius:999px; background:#e6fffa; color:#065f46; font-weight:700; font-size:.95rem}
-    .info p {margin:.35rem 0}
-    .note {margin-top:1rem; padding:.8rem; border-left:4px solid #2f855a; background:#f0fdf4; color:#14532d}
+    :root{
+      --bg:#f6fbf8;
+      --card:#ffffff;
+      --ink:#1f2937;
+      --muted:#4b5563;
+      --brand:#166534;
+      --brand-2:#0f766e;
+      --line:#d1fae5;
+      --accent:#ecfdf5;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% 10%, #dcfce7 0%, transparent 40%),
+        radial-gradient(circle at 90% 20%, #ccfbf1 0%, transparent 35%),
+        var(--bg);
+      min-height:100vh;
+    }
+    .wrap{max-width:980px;margin:0 auto;padding:2rem 1rem 3rem}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(22,101,52,.08);
+      overflow:hidden;
+    }
+    .hero{padding:2rem 1.5rem;background:linear-gradient(135deg,#f0fdf4,#ecfeff)}
+    .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+    h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.6rem 0 .5rem}
+    .sub{font-size:1.1rem;color:var(--muted);max-width:70ch}
+    .pill{
+      display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;
+      background:#065f46;color:#ecfeff;padding:.62rem .9rem;border-radius:999px;
+      font-weight:700;font-size:.96rem
+    }
+    .content{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;padding:1.3rem}
+    .panel{border:1px solid #e5e7eb;border-radius:14px;padding:1rem;background:#fff}
+    .panel h2{margin:.2rem 0 .8rem;font-size:1.05rem}
+    .list{margin:0;padding-left:1rem}
+    .list li{margin:.45rem 0;color:var(--muted)}
+    .kvs p{margin:.5rem 0;color:var(--muted)}
+    .kvs strong{color:#111827}
+    .cta{
+      display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem
+    }
+    .btn{
+      display:inline-block;text-decoration:none;font-weight:700;border-radius:10px;
+      padding:.72rem 1rem
+    }
+    .btn-primary{background:var(--brand);color:#fff}
+    .btn-secondary{background:var(--accent);color:var(--brand);border:1px solid #86efac}
+    .foot{padding:1rem 1.3rem 1.4rem;color:#065f46;font-weight:600}
+    @media (max-width: 820px){.content{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <main class="container">
-    <section class="coming-soon">
-      <p class="eyebrow">Coming Soon</p>
-      <h1>Tiffin Bay Montessori School</h1>
-      <p class="lead">A Montessori school rooted in nature, care, and community.</p>
-
-      <p class="pill">CWELCC Enrolled • $22/day spaces</p>
-
-      <p>
-        A thoughtfully prepared Montessori learning environment is coming to Midland,
-        inspired by Tiffin Bay and the natural beauty of Georgian Bay.
-      </p>
-
-      <div class="info">
-        <p>📍 <strong>788 Yonge Street, Midland</strong></p>
-        <p>🛠️ Currently undergoing renovations</p>
-        <p>📧 Inquiries: <a href="mailto:childcaremidland.on@gmail.com">childcaremidland.on@gmail.com</a></p>
+  <main class="wrap">
+    <section class="card">
+      <div class="hero">
+        <span class="eyebrow">Coming Soon</span>
+        <h1>Tiffin Bay Montessori School</h1>
+        <p class="sub">A Montessori school rooted in nature, care, and community — thoughtfully prepared for Midland families.</p>
+        <div class="pill">⭐ CWELCC Enrolled • $22/day spaces</div>
       </div>
 
-      <p class="note">
-        Licensed Child Care • Canada-Wide Early Learning &amp; Child Care (CWELCC)
-      </p>
+      <div class="content">
+        <article class="panel">
+          <h2>Opening in Midland</h2>
+          <p class="sub" style="font-size:1rem; margin-top:0;">A carefully prepared Montessori learning environment is coming to Midland, inspired by Tiffin Bay and the natural beauty of Georgian Bay.</p>
+          <ul class="list">
+            <li>Montessori-led, child-centered approach</li>
+            <li>Warm, calm, and structured classrooms</li>
+            <li>Built around independence, care, and community</li>
+          </ul>
+        </article>
+
+        <aside class="panel kvs">
+          <h2>School Info</h2>
+          <p>📍 <strong>788 Yonge Street, Midland</strong></p>
+          <p>🛠️ <strong>Currently undergoing renovations</strong></p>
+          <p>📧 <strong>Inquiries:</strong><br><a href="mailto:childcaremidland.on@gmail.com">childcaremidland.on@gmail.com</a></p>
+          <div class="cta">
+            <a class="btn btn-primary" href="mailto:childcaremidland.on@gmail.com?subject=Tiffin%20Bay%20Montessori%20Inquiry">Send Inquiry</a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="foot">Licensed Child Care • Canada-Wide Early Learning &amp; Child Care (CWELCC)</div>
     </section>
   </main>
 </body>
