@@ -211,7 +211,7 @@
       </div>
 
       <div class="form-wrap">
-        <form id="interest-form" class="panel" action="https://formspree.io/f/meelngga" method="POST">
+        <form id="interest-form" class="panel" action="https://hooks.zapier.com/hooks/catch/26729933/ux69iyb/" method="POST">
           <h2>Start Registration (2 minutes)</h2>
           <p class="sub" style="font-size:1rem;margin:.1rem 0 .7rem;">This is our primary registration intake form. Share your details once and we’ll guide you through the next steps.</p>
 
@@ -267,8 +267,6 @@
           </div>
 
           <input type="hidden" name="intake_source" value="website_primary_registration_form" />
-          <input type="hidden" name="_subject" value="New Tiffin Bay registration intake" />
-          <input type="hidden" name="_next" value="https://midland-montessori.ca/?submitted=true" />
           <button class="btn btn-primary" type="submit">Submit Registration Request</button>
           <p class="help">If you already emailed or texted us, you can still submit this form so we can keep your details together in one intake stream.</p>
         </form>
@@ -299,10 +297,42 @@
   <script>
     (function () {
       var params = new URLSearchParams(window.location.search);
-      if (params.get('submitted') === 'true') {
-        var note = document.getElementById('submitted-note');
-        if (note) note.style.display = 'block';
+      var note = document.getElementById('submitted-note');
+      var form = document.getElementById('interest-form');
+
+      if (params.get('submitted') === 'true' && note) {
+        note.style.display = 'block';
       }
+
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Submitting...';
+        }
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form)
+        }).then(function () {
+          if (note) {
+            note.textContent = 'Thanks — your registration request has been received. We’ll be in touch soon.';
+            note.style.display = 'block';
+          }
+          form.reset();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }).catch(function () {
+          alert('Sorry, something went wrong sending your form. Please email childcaremidland.on@gmail.com and we will help right away.');
+        }).finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit Registration Request';
+          }
+        });
+      });
     })();
   </script>
 </body>
