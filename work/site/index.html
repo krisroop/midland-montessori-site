@@ -115,11 +115,11 @@
     .field{display:flex;flex-direction:column;gap:.36rem}
     .field-full{grid-column:1/-1}
     label{font-size:.9rem;font-weight:600;color:#334155}
-    input,textarea{
+    input,textarea,select{
       border:1px solid #d2dddd;border-radius:10px;padding:.72rem .76rem;
       font:inherit;background:#fff;
     }
-    input:focus,textarea:focus{outline:2px solid #9ec0c2;outline-offset:1px;border-color:#87aaac}
+    input:focus,textarea:focus,select:focus{outline:2px solid #9ec0c2;outline-offset:1px;border-color:#87aaac}
     textarea{min-height:120px;resize:vertical}
     .help{font-size:.85rem;color:#64748b;margin-top:.6rem}
     details{border:1px solid #e2ebeb;border-radius:10px;padding:.72rem .82rem;margin:.55rem 0;background:#fff}
@@ -193,26 +193,27 @@
 
       <div class="split">
         <section class="panel" aria-labelledby="registration-title">
-          <h2 id="registration-title">Registration Form</h2>
-          <p class="sub" style="font-size:1rem;margin-top:0;">Ready to register? Download the waiting list form and email it to us once complete.</p>
-          <p><a href="TiffinBayWaitingList.pdf" target="_blank" rel="noopener" class="btn btn-primary">Download Waiting List Form (PDF)</a></p>
-          <p style="margin-top:.65rem;color:var(--muted)">After completing the form, send it to <a class="inline-link" href="mailto:childcaremidland.on@gmail.com">childcaremidland.on@gmail.com</a>.</p>
+          <h2 id="registration-title">One Simple Registration Path</h2>
+          <p class="sub" style="font-size:1rem;margin-top:0;">Use the form below as the primary intake. It captures the key details we need and keeps every inquiry in one organized stream.</p>
+          <ul class="list" style="padding-left:1.2rem">
+            <li>Fast 2-minute form completion</li>
+            <li>Structured details for easier follow-up</li>
+            <li>Single intake workflow for your family</li>
+          </ul>
         </section>
 
         <section class="panel" aria-labelledby="timeline-title">
-          <h2 id="timeline-title">What Happens Next</h2>
-          <ul class="list" style="padding-left:1.2rem">
-            <li>Submit the interest form below</li>
-            <li>Watch for opening and intake updates by email</li>
-            <li>Complete waiting list/registration steps when invited</li>
-          </ul>
+          <h2 id="timeline-title">Prefer Printable Forms?</h2>
+          <p class="sub" style="font-size:1rem;margin-top:0;">You can still use the PDF option if needed.</p>
+          <p><a href="TiffinBayWaitingList.pdf" target="_blank" rel="noopener" class="btn btn-primary">Download Waiting List Form (PDF)</a></p>
+          <p style="margin-top:.65rem;color:var(--muted)">After completing the form, send it to <a class="inline-link" href="mailto:childcaremidland.on@gmail.com">childcaremidland.on@gmail.com</a>.</p>
         </section>
       </div>
 
       <div class="form-wrap">
         <form id="interest-form" class="panel" action="https://formspree.io/f/meelngga" method="POST">
-          <h2>Join the Interest List</h2>
-          <p class="sub" style="font-size:1rem;margin:.1rem 0 .7rem;">Leave your details and we’ll contact you about opening updates, wait list timing, and next steps.</p>
+          <h2>Start Registration (2 minutes)</h2>
+          <p class="sub" style="font-size:1rem;margin:.1rem 0 .7rem;">This is our primary registration intake form. Share your details once and we’ll guide you through the next steps.</p>
 
           <div class="form-grid">
             <div class="field">
@@ -228,20 +229,48 @@
               <input id="phone" name="phone" type="tel" autocomplete="tel" required />
             </div>
             <div class="field">
-              <label for="child_age">Child Age</label>
-              <input id="child_age" name="child_age" type="text" placeholder="e.g., 2.5 years" />
+              <label for="preferred_contact">Preferred Contact Method</label>
+              <select id="preferred_contact" name="preferred_contact">
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="Text">Text</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="child_name">Child Name</label>
+              <input id="child_name" name="child_name" type="text" />
+            </div>
+            <div class="field">
+              <label for="child_dob">Child Date of Birth</label>
+              <input id="child_dob" name="child_dob" type="date" />
+            </div>
+            <div class="field">
+              <label for="start_date">Preferred Start Date</label>
+              <input id="start_date" name="start_date" type="month" />
+            </div>
+            <div class="field">
+              <label for="days_needed">Days Needed</label>
+              <select id="days_needed" name="days_needed">
+                <option value="Full-time">Full-time (5 days)</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Unsure">Not sure yet</option>
+              </select>
             </div>
             <div class="field field-full">
               <label for="message">Details / Questions</label>
-              <textarea id="message" name="message" placeholder="Preferred start timeline, days needed, and anything important."></textarea>
+              <textarea id="message" name="message" placeholder="Any schedule notes, sibling info, or questions."></textarea>
+            </div>
+            <div class="field field-full">
+              <label><input type="checkbox" name="consent_contact" required /> I consent to being contacted about registration, wait list, and enrollment updates.</label>
             </div>
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           </div>
 
-          <input type="hidden" name="_subject" value="New Tiffin Bay Montessori inquiry" />
+          <input type="hidden" name="intake_source" value="website_primary_registration_form" />
+          <input type="hidden" name="_subject" value="New Tiffin Bay registration intake" />
           <input type="hidden" name="_next" value="https://midland-montessori.ca/?submitted=true" />
-          <button class="btn btn-primary" type="submit">Send Inquiry</button>
-          <p class="help">By submitting this form, you consent to being contacted regarding child care availability and enrollment updates.</p>
+          <button class="btn btn-primary" type="submit">Submit Registration Request</button>
+          <p class="help">If you already emailed or texted us, you can still submit this form so we can keep your details together in one intake stream.</p>
         </form>
       </div>
 
