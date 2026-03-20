@@ -17,7 +17,8 @@ body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sa
 .hero{position:relative;padding:2rem 1.5rem;min-height:280px;background:url('/images/reno-classroom-hero.jpg') center/cover no-repeat;color:#fff}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(24,39,46,.68),rgba(24,39,46,.38) 45%,rgba(24,39,46,.18));}
 .hero > *{position:relative;z-index:1}
-.hero-logo{display:block;width:min(240px,45vw);height:auto;margin:0 0 .8rem;filter:drop-shadow(0 6px 16px rgba(0,0,0,.3));border-radius:8px}
+.hero-logo-wrap{display:inline-block;background:rgba(255,255,255,.92);padding:.5rem .65rem;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.2);margin:0 0 .9rem}
+.hero-logo{display:block;width:min(240px,45vw);height:auto;border-radius:6px}
 .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#d8ecec}
 h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.6rem 0 .5rem}
 .sub{font-size:1.08rem;color:var(--muted);max-width:70ch}
@@ -52,7 +53,7 @@ summary{font-weight:600;cursor:pointer}
 <main class="wrap">
 <section class="card">
 <div class="hero">
-<img class="hero-logo" src="/images/tiffin-bay-logo.png" alt="Tiffin Bay Montessori logo" />
+<div class="hero-logo-wrap"><img class="hero-logo" src="/images/tiffin-bay-logo.png" alt="Tiffin Bay Montessori logo" /></div>
 <span class="eyebrow">Coming April</span>
 <h1>Tiffin Bay Montessori School</h1>
 <p class="sub">A new licensed child care centre in Midland with a Montessori-inspired curriculum, thoughtfully prepared materials, and a calm, nurturing learning environment.</p>
