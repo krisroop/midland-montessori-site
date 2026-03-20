@@ -14,11 +14,16 @@
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 10%, #EAF2F2 0%, transparent 40%),radial-gradient(circle at 90% 20%, #D7E3E3 0%, transparent 35%),var(--bg);min-height:100vh}
 .wrap{max-width:980px;margin:0 auto;padding:2rem 1rem 3rem}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px rgba(22,101,52,.08);overflow:hidden}
-.hero{padding:2rem 1.5rem;background:linear-gradient(135deg,#F7FBFB,#EAF2F2)}
-.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+.hero{position:relative;padding:2rem 1.5rem;min-height:280px;background:url('/images/reno-classroom-hero.jpg') center/cover no-repeat;color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(24,39,46,.68),rgba(24,39,46,.38) 45%,rgba(24,39,46,.18));}
+.hero > *{position:relative;z-index:1}
+.hero-logo{display:block;width:min(240px,45vw);height:auto;margin:0 0 .8rem;filter:drop-shadow(0 6px 16px rgba(0,0,0,.3));border-radius:8px}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#d8ecec}
 h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.6rem 0 .5rem}
 .sub{font-size:1.08rem;color:var(--muted);max-width:70ch}
+.hero .sub{color:#eef6f6}
 .pill{display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;background:#2F4858;color:#F2F7F7;padding:.62rem .9rem;border-radius:999px;font-weight:700;font-size:.96rem}
+.hero .pill{background:rgba(20,34,40,.72);border:1px solid rgba(255,255,255,.25)}
 .content{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;padding:1.3rem}
 .panel{border:1px solid #e5e7eb;border-radius:14px;padding:1rem;background:#fff}
 .panel h2{margin:.2rem 0 .8rem;font-size:1.05rem}
@@ -47,6 +52,7 @@ summary{font-weight:600;cursor:pointer}
 <main class="wrap">
 <section class="card">
 <div class="hero">
+<img class="hero-logo" src="/images/tiffin-bay-logo.png" alt="Tiffin Bay Montessori logo" />
 <span class="eyebrow">Coming April</span>
 <h1>Tiffin Bay Montessori School</h1>
 <p class="sub">A new licensed child care centre in Midland with a Montessori-inspired curriculum, thoughtfully prepared materials, and a calm, nurturing learning environment.</p>
