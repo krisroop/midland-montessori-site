@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Coming May | Tiffin Bay Montessori</title>
-<meta name="description" content="Coming May to Midland: Montessori approach licensed child care with 31 CWELCC spaces at $22/day." />
+<title>Tiffin Bay Montessori | Now Open in Midland</title>
+<meta name="description" content="Now open in Midland: Tiffin Bay Montessori is a licensed child care centre offering a Montessori curriculum with 31 CWELCC spaces at $22/day." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,17 +14,23 @@
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 10%, #EAF2F2 0%, transparent 40%),radial-gradient(circle at 90% 20%, #D7E3E3 0%, transparent 35%),var(--bg);min-height:100vh}
 .wrap{max-width:980px;margin:0 auto;padding:2rem 1rem 3rem}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px rgba(22,101,52,.08);overflow:hidden}
-.hero{position:relative;padding:2rem 1.5rem;min-height:280px;background: linear-gradient(135deg, #18272e 0%, #1a4a5a 50%, #2d7a6e 100%);color:#fff}
+.site-header{background:#fff;padding:1rem 1.5rem;border-bottom:1px solid var(--line);display:flex;align-items:center}.site-header img{width:min(260px,55vw);height:auto;display:block}.hero{position:relative;padding:2rem 1.5rem;min-height:240px;background:linear-gradient(135deg, #18272e 0%, #1a4a5a 50%, #2d7a6e 100%);color:#fff}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(24,39,46,.68),rgba(24,39,46,.38) 45%,rgba(24,39,46,.18));}
 .hero > *{position:relative;z-index:1}
 .hero-logo-wrap{display:inline-block;background:rgba(255,255,255,.98);padding:.6rem .8rem;border-radius:14px;border:1px solid rgba(255,255,255,.85);box-shadow:0 12px 30px rgba(0,0,0,.28);margin:0 0 1rem}
 .hero-logo{display:block;width:min(320px,62vw);height:auto;border-radius:6px}
 .eyebrow{display:inline-block;font-size:.82rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#e8f4f4}
-h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.6rem 0 .5rem}
+.open-badge{display:inline-block;background:#2ecc8b;color:#fff;font-size:1.15rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1.4rem;border-radius:999px;margin-bottom:.8rem;box-shadow:0 4px 18px rgba(46,204,139,.45)}
+h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.4rem 0 .5rem}
 .sub{font-size:1.08rem;color:var(--muted);max-width:70ch}
 .hero .sub{color:#eef6f6}
 .pill{display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;background:#2F4858;color:#F2F7F7;padding:.62rem .9rem;border-radius:999px;font-weight:700;font-size:.96rem}
 .hero .pill{background:rgba(20,34,40,.72);border:1px solid rgba(255,255,255,.25)}
+.hero-ctas{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:10px;padding:.72rem 1rem}
+.btn-primary{background:var(--brand);color:#fff;border:0;cursor:pointer}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);cursor:pointer}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
 .content{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;padding:1.3rem}
 .panel{border:1px solid #e5e7eb;border-radius:14px;padding:1rem;background:#fff}
 .panel h2{margin:.2rem 0 .8rem;font-size:1.05rem}
@@ -32,16 +38,26 @@ h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2rem,4vw,3rem);l
 .list li{margin:.45rem 0;color:var(--muted)}
 .kvs p{margin:.5rem 0;color:var(--muted)}
 .kvs strong{color:#111827}
-.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:10px;padding:.72rem 1rem}
-.btn-primary{background:var(--brand);color:#fff;border:0;cursor:pointer}
 .links a{color:#2F4858}
+
+/* Montessori explainer strip */
+.montessori-strip{padding:0 1.3rem 0}
+.montessori-panel{border:1px solid #d7e3e3;border-radius:14px;padding:1.2rem 1.4rem;background:linear-gradient(135deg,#f0f8f8,#eaf2f2);margin-bottom:1rem}
+.montessori-panel h2{margin:.2rem 0 .6rem;font-size:1.1rem;color:var(--ink)}
+.montessori-panel p{margin:.4rem 0;color:var(--muted);font-size:.97rem}
+.montessori-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem;margin-top:.9rem}
+.m-card{background:#fff;border:1px solid #d7e3e3;border-radius:10px;padding:.8rem .9rem}
+.m-card .icon{font-size:1.4rem;margin-bottom:.3rem}
+.m-card strong{display:block;font-size:.95rem;color:var(--ink);margin-bottom:.25rem}
+.m-card span{font-size:.88rem;color:var(--muted)}
+
 .form-wrap,.faq-wrap{padding:0 1.3rem 1.3rem}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
 .field{display:flex;flex-direction:column;gap:.35rem}
 .field-full{grid-column:1/-1}
 label{font-size:.92rem;font-weight:600;color:#374151}
-input,textarea{border:1px solid #d1d5db;border-radius:10px;padding:.7rem .75rem;font:inherit}
-textarea{min-height:120px;resize:vertical}
+input,textarea,select{border:1px solid #d1d5db;border-radius:10px;padding:.7rem .75rem;font:inherit}
+textarea{min-height:100px;resize:vertical}
 .help{font-size:.85rem;color:#6b7280;margin-top:.5rem}
 details{border:1px solid #e5e7eb;border-radius:10px;padding:.7rem .8rem;margin:.55rem 0;background:#fff}
 summary{font-weight:600;cursor:pointer}
@@ -52,133 +68,160 @@ summary{font-weight:600;cursor:pointer}
 <body>
 <main class="wrap">
 <section class="card">
+
+<!-- HERO -->
+<div class="site-header"><img src="/images/tiffin-bay-logo.png" alt="Tiffin Bay Montessori logo" /></div>
 <div class="hero">
-<div class="hero-logo-wrap"><img class="hero-logo" src="/images/tiffin-bay-logo.png" alt="Tiffin Bay Montessori logo" /></div>
-<span class="eyebrow">Coming May</span>
-<h1>Tiffin Bay Montessori</h1>
-<p class="sub">A new licensed child care centre in Midland with a Montessori approach curriculum, thoughtfully prepared materials, and a calm, nurturing learning environment.</p>
-<div class="pill">⭐ 31 CWELCC Spaces • $22/day</div>
-<p style="margin:.8rem 0 0"><a class="btn btn-primary" href="/careers.html">We're Hiring — View Open Roles</a></p>
+  <div class="open-badge">✅ Now Open</div>
+  <h1>Tiffin Bay Montessori</h1>
+  <p class="sub">Midland's first licensed Montessori child care centre — now welcoming full-time enrollments. A calm, prepared environment where children learn by doing, at their own pace.</p>
+  <div class="pill">⭐ 31 CWELCC Spaces • $22/day</div>
+  <div class="hero-ctas">
+    <a class="btn btn-primary" href="#enroll">Enroll Now</a>
+    <a class="btn btn-ghost" href="#what-is-montessori">What is Montessori?</a>
+  </div>
 </div>
 
+<!-- INFO PANELS -->
 <div class="content">
-<article class="panel">
-<h2>Opening in Midland</h2>
-<p class="sub" style="font-size:1rem; margin-top:0;">Families in Midland and surrounding communities can join our interest list now for opening updates and intake timing.</p>
-<ul class="list">
-<li>Montessori approach, child-centered daily learning</li>
-<li>Prepared classroom materials and purposeful routines</li>
-<li>Licensed child care participating in CWELCC</li>
-<li>Tight alignment with Simcoe County child care and CWELCC processes</li>
-<li>31 CWELCC-funded spaces targeted at $22/day</li>
-</ul>
-</article>
+  <article class="panel">
+    <h2>Now Enrolling Full-Time</h2>
+    <p class="sub" style="font-size:1rem; margin-top:0;">Tiffin Bay Montessori is open and accepting full-time enrollments. Spaces are limited — families on our interest list are being contacted now.</p>
+    <ul class="list">
+      <li>Montessori curriculum — child-led, hands-on, purposeful</li>
+      <li>Thoughtfully prepared classroom materials</li>
+      <li>Calm, nurturing environment with consistent routines</li>
+      <li>Licensed under Ontario's <em>Child Care and Early Years Act</em></li>
+      <li>CWELCC-funded: 31 spaces at <strong>$22/day</strong></li>
+    </ul>
+  </article>
 
-<aside class="panel kvs">
-<h2>Centre Info</h2>
-<p>📍 <strong>788 Yonge Street, Midland</strong></p>
-<p>🛠️ <strong>Currently undergoing renovations</strong></p>
-<p>✅ <strong>Licensed child care centre under Ontario’s CCEYA, participating in CWELCC</strong></p>
-<p>📧 <strong>Inquiries:</strong><br><a href="mailto:childcaremidland.on@gmail.com">childcaremidland.on@gmail.com</a></p>
-<div class="links">
-<p><strong>CWELCC / Simcoe resources:</strong><br>These links provide CWELCC and child care program information. Registration for this centre is handled directly by Tiffin Bay Montessori.</p>
-<p><a href="https://simcoe.ca/residents/children-services/early-learning-child-care-poster/canada-wide-early-learning-and-child-care-directed-growth/" target="_blank" rel="noopener">Simcoe County CWELCC Information</a></p>
-<p><a href="https://www.ontario.ca/page/canada-ontario-early-years-and-child-care-agreement" target="_blank" rel="noopener">Ontario CWELCC Program Information</a></p>
-</div>
-</aside>
+  <aside class="panel kvs">
+    <h2>Centre Info</h2>
+    <p>📍 <strong>788 Yonge Street, Midland</strong></p>
+    <p>✅ <strong>Licensed child care centre (CCEYA) — CWELCC participant</strong></p>
+    <p>📧 <strong>Inquiries:</strong><br><a href="mailto:childcaremidland.on@gmail.com">childcaremidland.on@gmail.com</a></p>
+    <div class="links" style="margin-top:.8rem">
+      <p><strong>CWELCC resources:</strong></p>
+      <p><a href="https://simcoe.ca/residents/children-services/early-learning-child-care-poster/canada-wide-early-learning-and-child-care-directed-growth/" target="_blank" rel="noopener">Simcoe County CWELCC Info</a></p>
+      <p><a href="https://www.ontario.ca/page/canada-ontario-early-years-and-child-care-agreement" target="_blank" rel="noopener">Ontario CWELCC Program Info</a></p>
+    </div>
+  </aside>
 </div>
 
+<!-- WHAT IS MONTESSORI -->
+<div class="montessori-strip" id="what-is-montessori">
+  <div class="montessori-panel">
+    <h2>What is Montessori?</h2>
+    <p>Montessori is an approach to early childhood education developed by Dr. Maria Montessori — built on the idea that children learn best when they're given freedom to explore within a carefully prepared environment. Rather than sitting and being taught, children choose their work, follow their curiosity, and build real skills at their own pace.</p>
+    <p>For many families in Midland, this may be your first encounter with Montessori — and that's exactly why we're here. We're introducing something different: an environment that respects children as capable, curious people.</p>
+    <div class="montessori-grid">
+      <div class="m-card">
+        <div class="icon">🤲</div>
+        <strong>Hands-On Learning</strong>
+        <span>Children work with real materials — not worksheets. They pour, sort, build, and discover.</span>
+      </div>
+      <div class="m-card">
+        <div class="icon">🧭</div>
+        <strong>Child-Led</strong>
+        <span>Each child chooses their work. Educators observe, guide, and introduce — never push.</span>
+      </div>
+      <div class="m-card">
+        <div class="icon">🌱</div>
+        <strong>Prepared Environment</strong>
+        <span>Every item in the room has a purpose. The space itself teaches order, focus, and care.</span>
+      </div>
+      <div class="m-card">
+        <div class="icon">🕐</div>
+        <strong>Unhurried Days</strong>
+        <span>Long, uninterrupted work periods let children develop deep concentration and independence.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ENROLLMENT FORM -->
+<div class="form-wrap" id="enroll">
+  <form class="panel" action="https://formspree.io/f/meelngga" method="POST">
+    <h2>Enroll Your Child — or Join the Waitlist</h2>
+    <p class="sub" style="font-size:1rem; margin-top:0;">Full-time spaces are available now. Submit your details and we'll follow up within one business day.</p>
+    <div class="form-grid">
+      <div class="field">
+        <label for="name">Parent/Guardian Name</label>
+        <input id="name" name="name" type="text" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" required />
+      </div>
+      <div class="field">
+        <label for="child_age">Child's Age</label>
+        <input id="child_age" name="child_age" type="text" placeholder="e.g., 2.5 years" />
+      </div>
+      <div class="field">
+        <label for="start_date">Preferred Start</label>
+        <input id="start_date" name="start_date" type="text" placeholder="e.g., June 2026, ASAP" />
+      </div>
+      <div class="field">
+        <label for="schedule">Schedule Needed</label>
+        <select id="schedule" name="schedule">
+          <option value="">-- Select --</option>
+          <option value="Full-time (5 days)">Full-time (5 days)</option>
+          <option value="Part-time (3 days)">Part-time (3 days)</option>
+          <option value="Flexible / Not sure">Flexible / Not sure</option>
+        </select>
+      </div>
+      <div class="field field-full">
+        <label for="message">Anything else we should know?</label>
+        <textarea id="message" name="message" placeholder="Questions, child's needs, anything important."></textarea>
+      </div>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+    </div>
+    <input type="hidden" name="_subject" value="New Tiffin Bay Montessori enrollment inquiry" />
+    <input type="hidden" name="_next" value="https://midland-montessori.ca/?submitted=true" />
+    <button class="btn btn-primary" type="submit">Send Enrollment Inquiry</button>
+    <p class="help">By submitting this form, you consent to being contacted regarding child care availability and enrollment. After completing your enrollment form, email it to <a href="mailto:childcaremidland.on@gmail.com">childcaremidland.on@gmail.com</a>.</p>
+  </form>
+</div>
+
+<!-- DOCUMENTS -->
 <div class="form-wrap">
-<form class="panel" action="https://formspree.io/f/meelngga" method="POST">
-<h2>Join the Interest List</h2>
-<p class="sub" style="font-size:1rem; margin-top:0;">Leave your details and we’ll contact you about opening updates, availability, and next steps.</p>
-<div class="form-grid">
-<div class="field">
-<label for="name">Parent/Guardian Name</label>
-<input id="name" name="name" type="text" required />
-</div>
-<div class="field">
-<label for="email">Email</label>
-<input id="email" name="email" type="email" required />
-</div>
-<div class="field">
-<label for="phone">Phone Number</label>
-<input id="phone" name="phone" type="tel" required />
-</div>
-<div class="field">
-<label for="child_age">Child Age</label>
-<input id="child_age" name="child_age" type="text" placeholder="e.g., 2.5 years" />
-</div>
-<div class="field field-full">
-<label for="message">Details / Questions</label>
-<textarea id="message" name="message" placeholder="Tell us your preferred start timeline, days needed, and anything important."></textarea>
-</div>
-<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-</div>
-<input type="hidden" name="_subject" value="New Tiffin Bay Montessori inquiry" />
-<input type="hidden" name="_next" value="https://midland-montessori.ca/?submitted=true" />
-<button class="btn btn-primary" type="submit">Send Inquiry</button>
-<p class="help">By submitting this form, you consent to being contacted regarding child care availability and enrollment updates.</p>
-</form>
+  <div class="panel">
+    <h2>Registration &amp; Documents</h2>
+    <p class="sub" style="font-size:1rem; margin-top:0;">Download our approved forms and parent handbook below.</p>
+    <p style="margin:.6rem 0;"><a href="/TiffinBayEnrollmentForm-May2026.pdf" target="_blank" rel="noopener" class="btn btn-primary">📋 Download Enrollment Form</a></p>
+    <p style="margin:.6rem 0;"><a href="/TiffinBayParentHandbook-May2026.pdf" target="_blank" rel="noopener" class="btn btn-primary">📖 Download Parent Handbook</a></p>
+    <p style="margin:.6rem 0;"><a href="/TiffinBayWaitingList.pdf" target="_blank" rel="noopener" class="btn btn-primary" style="background:#4f6470;">📝 Download Waiting List Form</a></p>
+  </div>
 </div>
 
+<!-- FAQ -->
 <div class="faq-wrap">
-<div class="panel">
-<h2>Quick FAQ</h2>
-<details><summary>When are you planning to open?</summary><p>We are targeting a May opening, subject to final licensing and renovation milestones.</p></details>
-<details><summary>Do you have CWELCC spaces?</summary><p>Yes. We are planning 31 CWELCC spaces with a target parent fee of $22/day.</p></details>
-<details><summary>How do I register or express interest?</summary><p>Please submit the form above directly to Tiffin Bay Montessori. We’ll contact families with availability and enrollment steps. Simcoe County and Ontario links on this page are for CWELCC/child care program information.</p></details>
-</div>
+  <div class="panel">
+    <h2>Quick FAQ</h2>
+    <details open><summary>Are you open now?</summary><p>Yes — Tiffin Bay Montessori is now open and welcoming full-time enrollments. We are building our class and spaces are limited. Submit an inquiry above to get started.</p></details>
+    <details><summary>What ages do you serve?</summary><p>We serve children from 18 months through pre-kindergarten age. Contact us if you're unsure whether your child qualifies.</p></details>
+    <details><summary>What is CWELCC and what does $22/day mean?</summary><p>CWELCC is the Canada-Wide Early Learning and Child Care program. Through CWELCC, eligible families pay a reduced parent fee — currently targeted at $22/day at Tiffin Bay Montessori. We have 31 CWELCC-funded spaces. Contact us for current fee details.</p></details>
+    <details><summary>What makes Montessori different from regular daycare?</summary><p>Montessori is a full educational approach — not just childcare. Children work with hands-on materials, choose their own activities, and develop independence, concentration, and a love of learning. Our director is trained in Montessori and is thoughtfully introducing this approach to Midland families.</p></details>
+    <details><summary>How do I register?</summary><p>Submit the inquiry form above. We'll follow up with next steps, including our enrollment form and parent handbook. You can also download both documents directly from this page.</p></details>
+  </div>
 </div>
 
+<!-- HIRING -->
 <div class="faq-wrap" id="careers">
-<div class="panel">
-<h2>We’re Hiring – Join Our Founding Team</h2>
-<p class="sub" style="font-size:1rem; margin-top:0;">Tiffin Bay Montessori is opening soon in Midland, Ontario, and we are building our founding team.</p>
-<p style="margin:.4rem 0 .9rem;"><a class="btn btn-primary" href="/careers.html">Open Careers Page</a></p>
-<p><strong>We Are Currently Hiring</strong></p>
-<ul class="list" style="padding-left:1.2rem">
-<li><strong>Early Childhood Educators / Classroom Assistants (RECE, ECE, or ECA)</strong> — educators will support children through observation, guidance, and meaningful learning experiences that encourage independence and curiosity.</li>
-<li><strong>Standby / On-Call Staff</strong> — flexible support staff who assist classrooms as needed to help maintain a consistent and supportive environment.</li>
-</ul>
-<p><strong>Qualifications</strong></p>
-<ul class="list" style="padding-left:1.2rem">
-<li>Experience working with young children</li>
-<li>RECE, ECE, or ECA credentials are an asset</li>
-<li>Interest in learning and growing within a Montessori environment</li>
-</ul>
-<p>📍 <strong>Location:</strong> 788 Yonge Street, Midland</p>
-<p>📧 <strong>Apply:</strong> <a href="mailto:childcaremidland.on@gmail.com?subject=Tiffin%20Bay%20Careers%20Application">childcaremidland.on@gmail.com</a></p>
-</div>
+  <div class="panel">
+    <h2>Join Our Team</h2>
+    <p class="sub" style="font-size:1rem; margin-top:0;">We're growing and looking for passionate educators who believe children deserve more.</p>
+    <p style="margin:.4rem 0 .9rem;"><a class="btn btn-primary" href="/careers.html">View Open Roles</a></p>
+    <p>📍 <strong>788 Yonge Street, Midland</strong> &nbsp;|&nbsp; 📧 <a href="mailto:childcaremidland.on@gmail.com?subject=Tiffin%20Bay%20Careers%20Application">childcaremidland.on@gmail.com</a></p>
+  </div>
 </div>
 
-<div class="panel" style="margin: 0 1.3rem 1.3rem;">
-<h2>Registration &amp; Documents</h2>
-<p class="sub" style="font-size:1rem; margin-top:0;">
-Download our approved forms and parent handbook below.
-</p>
-<p style="margin:.6rem 0;">
-<a href="/TiffinBayEnrollmentForm-May2026.pdf" target="_blank" rel="noopener" class="btn btn-primary">
-📋 Download Enrollment Form (May 2026)
-</a>
-</p>
-<p style="margin:.6rem 0;">
-<a href="/TiffinBayParentHandbook-May2026.pdf" target="_blank" rel="noopener" class="btn btn-primary">
-📖 Download Parent Handbook (May 2026)
-</a>
-</p>
-<p style="margin:.6rem 0;">
-<a href="/TiffinBayWaitingList.pdf" target="_blank" rel="noopener" class="btn btn-primary" style="background:#4f6470;">
-📝 Download Waiting List Form
-</a>
-</p>
-<p style="margin-top:.75rem; color:#4f6470;">
-After completing your enrollment form, please email it to
-<a href="mailto:childcaremidland.on@gmail.com">childcaremidland.on@gmail.com</a>.
-</p>
-</div>
-
-<div class="foot">Licensed Child Care • Canada-Wide Early Learning &amp; Child Care (CWELCC)</div>
+<div class="foot">Licensed Child Care • Canada-Wide Early Learning &amp; Child Care (CWELCC) • Midland, Ontario</div>
 </section>
 </main>
 </body>
